@@ -28,7 +28,7 @@ void mgos_sht31_begin(AE_SHT31 *sht31) {
 }
 
 int mgos_sht31_read_status(AE_SHT31 *sht31) {
-  if (sht31 == nullptr) return;
+  if (sht31 == nullptr) return MGOS_SHT31_RES_FAIL;
   int res = sht31->ReadStatus();
   return isnan(res) ? MGOS_SHT31_RES_FAIL : res;
 }
