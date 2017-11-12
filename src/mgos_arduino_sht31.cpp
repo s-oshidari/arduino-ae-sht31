@@ -33,7 +33,7 @@ int mgos_sht31_read_status(AE_SHT31 *sht31) {
   return isnan(res) ? MGOS_SHT31_RES_FAIL : res;
 }
 
-int mgos_sht31_read_temperature(AE_SHT31 *sht) {
+int mgos_sht31_read_temperature(AE_SHT31 *sht31) {
   if (sht31 == nullptr) return MGOS_SHT31_RES_FAIL;
   sht31->GetTempHum();
   float res = sht31->Temperature();
