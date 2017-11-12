@@ -27,11 +27,11 @@ void mgos_sht31_begin(AE_SHT31 *sht31) {
   sht31->Heater(0);
 }
 
-int mgos_sht31_read_status(AE_SHT31 *sht31) {
-  if (sht31 == nullptr) return;
-  float res = sht31->ReadStatus();
-  return isnan(res) ? MGOS_SHT31_RES_FAIL : round(res * 100.0);
-}
+//int mgos_sht31_read_status(AE_SHT31 *sht31) {
+//  if (sht31 == nullptr) return;
+//  uint16_t res = sht31->ReadStatus();
+//  return isnan(res) ? MGOS_SHT31_RES_FAIL : res;
+//}
 
 int mgos_sht31_read_temperature(AE_SHT31 *sht31) {
   if (sht31 == nullptr) return MGOS_SHT31_RES_FAIL;

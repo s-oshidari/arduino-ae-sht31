@@ -4,7 +4,7 @@ let SHT31 = {
   _create: ffi('void *mgos_sht31_create(int)'),
   _cls: ffi('void mgos_sht31_close(void *)'),
   _bgn: ffi('void mgos_sht31_begin(void *)'),
-  _rs: ffi('int mgos_sht31_read_status(void *)'),
+//  _rs: ffi('int mgos_sht31_read_status(void *)'),
   _rt: ffi('int mgos_sht31_read_temperature(void *)'),
   _rh: ffi('int mgos_sht31_read_humidity(void *)'),
 
@@ -17,9 +17,9 @@ let SHT31 = {
       return SHT31._bgn(this.sht);
     },
 
-    readStatus: function() {
-      return SHT31._rs(this.sht);
-    },
+//    readStatus: function() {
+//      return SHT31._rs(this.sht);
+//    },
 
     readTemperature: function() {
       // C-functions output value of “1234” equals 12.34 Deg.
